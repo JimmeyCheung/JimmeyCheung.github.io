@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Jimmey&#39;s Blog</title>
-    <link>http://JimmeyCheung.git.io/posts/</link>
+    <link>http://JimmeyCheung.top/posts/</link>
     <description>Recent content in Posts on Jimmey&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 21 Apr 2020 10:51:48 +0800</lastBuildDate>
     
-	<atom:link href="http://JimmeyCheung.git.io/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://JimmeyCheung.top/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>第二篇博客</title>
-      <link>http://JimmeyCheung.git.io/posts/%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/</link>
+      <link>http://JimmeyCheung.top/posts/%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Tue, 21 Apr 2020 10:51:48 +0800</pubDate>
       
-      <guid>http://JimmeyCheung.git.io/posts/%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>http://JimmeyCheung.top/posts/%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/</guid>
       <description>这是我的第二篇博客 </description>
     </item>
     
     <item>
       <title>开博大吉</title>
-      <link>http://JimmeyCheung.git.io/posts/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</link>
+      <link>http://JimmeyCheung.top/posts/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</link>
       <pubDate>Tue, 21 Apr 2020 10:04:25 +0800</pubDate>
       
-      <guid>http://JimmeyCheung.git.io/posts/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</guid>
+      <guid>http://JimmeyCheung.top/posts/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</guid>
       <description>Ladies and gentlemen,welcome to Jimmey&amp;rsquo;s blog! </description>
     </item>
     
