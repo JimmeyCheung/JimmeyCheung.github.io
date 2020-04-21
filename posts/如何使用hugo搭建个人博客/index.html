@@ -26,22 +26,22 @@
     
     
     <meta property="og:title" content="如何使用hugo搭建个人博客" />
-<meta property="og:description" content="注:xxx在下文中代指github的用户名  安装对应操作系统的hugo安装地址. 为了能够在bash命令中执行hugo命令,添加hugo所在文件夹路径到PATH环境变量中.使用命令hugo version检测是否安装成功. 使用命令进行配置:  // 新建一个hugo站点 hugo new site xxx." />
+<meta property="og:description" content="注:xxx在下文中代指github的用户名  安装对应操作系统的hugo安装地址. 为了能够在bash命令中执行hugo命令,添加hugo所在文件夹路径到PATH环境变量中.使用命令hugo version检测是否安装成功. 新建站点和博客内容  // 新建一个hugo站点 hugo new site xxx." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://JimmeyCheung.top/posts/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" />
 <meta property="article:published_time" content="2020-04-21T13:25:47+08:00" />
 <meta property="article:modified_time" content="2020-04-21T13:25:47+08:00" />
 <meta itemprop="name" content="如何使用hugo搭建个人博客">
-<meta itemprop="description" content="注:xxx在下文中代指github的用户名  安装对应操作系统的hugo安装地址. 为了能够在bash命令中执行hugo命令,添加hugo所在文件夹路径到PATH环境变量中.使用命令hugo version检测是否安装成功. 使用命令进行配置:  // 新建一个hugo站点 hugo new site xxx.">
+<meta itemprop="description" content="注:xxx在下文中代指github的用户名  安装对应操作系统的hugo安装地址. 为了能够在bash命令中执行hugo命令,添加hugo所在文件夹路径到PATH环境变量中.使用命令hugo version检测是否安装成功. 新建站点和博客内容  // 新建一个hugo站点 hugo new site xxx.">
 <meta itemprop="datePublished" content="2020-04-21T13:25:47&#43;08:00" />
 <meta itemprop="dateModified" content="2020-04-21T13:25:47&#43;08:00" />
-<meta itemprop="wordCount" content="81">
+<meta itemprop="wordCount" content="98">
 
 
 
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="如何使用hugo搭建个人博客"/>
-<meta name="twitter:description" content="注:xxx在下文中代指github的用户名  安装对应操作系统的hugo安装地址. 为了能够在bash命令中执行hugo命令,添加hugo所在文件夹路径到PATH环境变量中.使用命令hugo version检测是否安装成功. 使用命令进行配置:  // 新建一个hugo站点 hugo new site xxx."/>
+<meta name="twitter:description" content="注:xxx在下文中代指github的用户名  安装对应操作系统的hugo安装地址. 为了能够在bash命令中执行hugo命令,添加hugo所在文件夹路径到PATH环境变量中.使用命令hugo version检测是否安装成功. 新建站点和博客内容  // 新建一个hugo站点 hugo new site xxx."/>
 
   </head>
 
@@ -136,13 +136,31 @@
 <ol>
 <li>安装对应操作系统的hugo<a href="https://github.com/gohugoio/hugo/releases">安装地址</a>.</li>
 <li>为了能够在bash命令中执行hugo命令,添加hugo所在文件夹路径到PATH环境变量中.使用命令<code>hugo version</code>检测是否安装成功.</li>
-<li>使用命令进行配置:</li>
+<li>新建站点和博客内容</li>
 </ol>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// 新建一个hugo站点
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">hugo</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">site</span> <span style="color:#a6e22e">xxx</span>.<span style="color:#a6e22e">github</span>.<span style="color:#a6e22e">io</span><span style="color:#f92672">-</span><span style="color:#a6e22e">creator</span> 
 <span style="color:#75715e">// 新建个人博客myBlog,博客内容可使用markdown在&#34;---&#34;段落后书写
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">hugo</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">posts</span><span style="color:#f92672">/</span><span style="color:#a6e22e">myBlog</span>.<span style="color:#a6e22e">md</span>
-<span style="color:#75715e">// 在本地服务端启用站点浏览博客页面
+</code></pre></div><ol start="4">
+<li>添加默认主题ananke</li>
+</ol>
+<pre><code>cd xxx.github.io-creator
+git init 
+git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
+echo 'theme = &quot;ananke&quot;' &gt;&gt; config.toml
+</code></pre><ol start="5">
+<li>下载自定义主题安装</li>
+</ol>
+<ul>
+<li>git clone 主题地址到themes目录</li>
+<li>删除主题中的.git文件: rm -rf ./themes/.git</li>
+<li>修改config.toml文件中的theme指定主题名</li>
+</ul>
+<ol start="6">
+<li>使用命令进行配置:</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// 在本地服务端启用站点浏览博客页面
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">写法一</span><span style="color:#f92672">:</span>  <span style="color:#a6e22e">hugo</span> <span style="color:#a6e22e">server</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">D</span>
 <span style="color:#a6e22e">写法二</span>(<span style="color:#a6e22e">不浏览草稿</span>,<span style="color:#a6e22e">手动修改draft为false</span>)<span style="color:#f92672">:</span>  <span style="color:#a6e22e">hugo</span> <span style="color:#a6e22e">server</span>
 <span style="color:#a6e22e">注意</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;---&#34;</span><span style="color:#a6e22e">段落中的date不能晚于当前时间</span>,<span style="color:#a6e22e">否则不会显示在博客中</span>
@@ -154,22 +172,18 @@
 </span><span style="color:#75715e"> * 由于public文件包含在xxx.github.io-creator文件中
 </span><span style="color:#75715e"> * 请在xxx.github.io-creator文件下的.gitignore文件中加上public文件夹
 </span><span style="color:#75715e"> */</span>
-<span style="color:#a6e22e">cd</span> <span style="color:#a6e22e">xxx</span>.<span style="color:#a6e22e">github</span>.<span style="color:#a6e22e">io</span><span style="color:#f92672">-</span><span style="color:#a6e22e">creator</span>
-<span style="color:#a6e22e">git</span> <span style="color:#a6e22e">init</span> 
-<span style="color:#a6e22e">git</span> <span style="color:#a6e22e">add</span> .
-<span style="color:#a6e22e">git</span> <span style="color:#a6e22e">commit</span> 
 <span style="color:#a6e22e">cd</span> <span style="color:#66d9ef">public</span> 
 <span style="color:#a6e22e">git</span> <span style="color:#a6e22e">init</span>
 <span style="color:#a6e22e">git</span> <span style="color:#a6e22e">add</span> .
 <span style="color:#a6e22e">git</span> <span style="color:#a6e22e">commit</span>
-</code></pre></div><ol start="4">
+</code></pre></div><ol start="7">
 <li>在github新建两个库xxx.github.io-creator和xxx.github.io,分别对应本地的xxx.github.io-creator仓库(用于备份,可选)和public仓库(对应github pages的站点)</li>
 </ol>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// 连接远程仓库xxx.github.io和本地仓库public.并将public代码提交
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">cd</span> <span style="color:#66d9ef">public</span> 
 <span style="color:#a6e22e">git</span> <span style="color:#a6e22e">remote</span> <span style="color:#a6e22e">add</span> <span style="color:#a6e22e">origin</span> <span style="color:#a6e22e">git</span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">github</span>.<span style="color:#a6e22e">com</span><span style="color:#f92672">:</span><span style="color:#a6e22e">xxx</span><span style="color:#f92672">/</span><span style="color:#a6e22e">xxx</span>.<span style="color:#a6e22e">github</span>.<span style="color:#a6e22e">io</span>
 <span style="color:#a6e22e">git</span> <span style="color:#a6e22e">push</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">u</span> <span style="color:#a6e22e">origin</span> <span style="color:#a6e22e">master</span>
-</code></pre></div><ol start="5">
+</code></pre></div><ol start="8">
 <li>提交完成后在github对应仓库的Settings的github pages查看站点地址进行访问</li>
 </ol>
 <ul class="pa0">
